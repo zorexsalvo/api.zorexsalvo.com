@@ -11,5 +11,5 @@ class Post(models.Model):
     )
     published = models.BooleanField(default=False)
 
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_created = models.DateField()
     date_updated = models.DateTimeField(auto_now=True)
