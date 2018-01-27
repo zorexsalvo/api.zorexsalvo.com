@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.1
+    environment:
+      - POSTGRES_USER=blogapi
+      - POSTGRES_PASSWORD=blogapi
+  api:
+    build: .
+    volumes:
+      - .:/opt/
+    ports:
+      - 8000:8000
+    links:
+      - db:blogapidb
