@@ -14,7 +14,8 @@ class PostSerializer(ModelSerializer):
             {
                 'content': formatter(
                     instance.content, filter_name='linebreaks'
-                )
+                ),
+                'created_by': instance.created_by.username,
             }
         )
         return data

@@ -5,3 +5,4 @@ django-pagedown==1.0.4
 django-markup[all-filter-dependencies]
 markdown
 django-cors-headers==2.1.0
+Pillow==5.0.0
