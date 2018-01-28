@@ -8,3 +8,4 @@ class PostViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    lookup_field = 'slug'

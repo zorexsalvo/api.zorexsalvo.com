@@ -13,6 +13,7 @@ class BlogTestCase(TestCase):
         post.date_update = None
         post.published = True
         post.tags = ['introduction',]
+        post.slug = '2018-01-01-happy-new-year'
         post.save()
 
         self.assertEqual(1, Post.objects.count())
