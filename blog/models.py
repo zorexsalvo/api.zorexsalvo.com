@@ -14,3 +14,6 @@ class Post(models.Model):
 
     date_created = models.DateField()
     date_updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.slug
