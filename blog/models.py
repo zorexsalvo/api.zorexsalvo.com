@@ -24,3 +24,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.slug
+
+class Bucket(models.Model):
+    title = models.CharField(max_length=255, blank=True)
+    image = models.ImageField(upload_to='uploads/')
+
+    date_created = models.DateField()
+    date_updated = models.DateTimeField(auto_now=True)
