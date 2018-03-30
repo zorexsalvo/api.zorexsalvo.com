@@ -3,6 +3,8 @@ FROM python:3.6.2
 LABEL maintainer="Zorex Salvo <zorexsalvo@gmail.com" \
       application="Blog API"
 
+ENV PYTHONUNBUFFERED=1
+
 RUN apt-get -y update
 
 COPY requirements.txt /opt/
